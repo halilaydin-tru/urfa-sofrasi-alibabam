@@ -1,57 +1,19 @@
 import './Gallery.css';
 
-// Use Vite dev proxy for cross-origin images (in production, set up a server-side proxy or host images directly)
-const BASE = '/gmap-img/gps-cs-s/';
-
+// Unsplash - Türk mutfağı & kebap fotoğrafları (ücretsiz)
 const photos = [
-  {
-    url: BASE + 'APNQkAES7kJf4zFgYIDVq7aSkhs_HtMjLlHajobsy7tm03FiTBvav9yvK5R2qRCAgB2D_PbBAtW9R75-wg1EtV4FUEZy-UDJ3xqPatLAJpodYA8vkwWmelXFyfDjZZ0SYAw_lGtkguvBsQdt8mCy=w800-h600-k-no',
-    label: 'Restoran',
-  },
-  {
-    url: BASE + 'APNQkAGZQ5rLn1nf2NbRmvUIQHn2OSYlkunTXHZ_3FWJYzxE2p3C30rbOceGNuT5GlyQWrUWIWB9_AZCjKM_vU1dIbRsTl_gACHQZ6umwgcZAoloFeHp8YV6tVpQwlXE8z3JAQ2pDWJ77ujRAY6-=w800-h1422-k-no',
-    label: 'Lezzetlerimiz',
-  },
-  {
-    url: BASE + 'APNQkAFXbx3mO2QCf2Uv4fSz9Mb5ifzYUR26pCMMQumTaRKFAogpwjFZodOhv3js37R-VNvJaYWOR3vojiRBQzcaRoEKjaZCkufMSmVet6Pyr9U6YYN00ITddiEt_FnTadzUOM8Y2a-IrVG3lTlr=w800-h600-k-no',
-    label: 'Kebap Çeşitleri',
-  },
-  {
-    url: BASE + 'APNQkAHB2Zkw0BgFbAU2dPP-4wpsNem_dZi5poAJQBfalFJSmK5q9arVdlqtn92izg-wbLVAz9B7qLkHrozyXdvxClcTPS4al5K7mTbWyVwDViAQqlxDCDCNUf4E8YFh-vrV0ghUC16lWaHOvMM=w800-h533-k-no',
-    label: 'Adana Kebap',
-  },
-  {
-    url: BASE + 'APNQkAEMZQ1mkJNRDnnmfbON0DCjWiYoCbhtXaF5U3ei3JuYGb5J2wosZ2-SpETQ_eBhLGGOFplJWoAX9DaOyZf7FH2Wll5egz8_4e2UXHmFAivSEiuDNiIRyVNh3w8wZEyQzbsieVSjPzK6VdNb=w800-h600-k-no',
-    label: 'Taze Lezzetler',
-  },
-  {
-    url: BASE + 'APNQkAGAfgKltxS7pgMZvM10OTyD95vm56Qd_Mly6PK8-1u5ftBkEbENo3NjTA4P0Q7JHf8_SAfZitnfmSmncjZXGNWxLQ2imtP_d7f_ZqwNqutcUDjFglivFFQ6IAdHLRDWpl0YX4JhkHkX5DU-=w800-h600-k-no',
-    label: 'Tabak Sunumu',
-  },
-  {
-    url: BASE + 'APNQkAH7DqIe74AOEppmeDxe108qQibQ0tLVSlu7tfxZeOB9FUZLnZQR7NvYVj8bZ5Dw6Rro7f0QHo_M9eJ6xT4jEQ9pN7Pbap9juBSO8b2hIWDXRQ8H-BcHNnBEWVfSZ9yLKWWqiRuKZVyD3RM=w800-h600-k-no',
-    label: 'Urfa Kebap',
-  },
-  {
-    url: BASE + 'APNQkAGnl62XxdDUqrA6UxtKrYJSGIWpNZigtvIR9pDYfDyN7Yf0Y7SpL81ZwmwXj0mOElf0jSqaVKicWWuVRsj9mC19cfzpmyxh_HP9j8wz2qXXHW3whFgCa8aEAG_-XGxNwHb8ZEO3HlNMG34=w800-h1067-k-no',
-    label: 'Özel Sunumlar',
-  },
-  {
-    url: BASE + 'APNQkAGjfzDGNDwAfDiRflpZpJ4ptTHkPe42mxr4LEK26V65rs4AwEUaiMNoymjUc-2T1S7ahMucUvU5-FUoJR9rBS11Nvm7rEzG5DyLezxynQYFLmaJbqFs8qhKip_oxD9A_gx_fOa3mKDZgLAL=w800-h600-k-no',
-    label: 'Izgara Çeşitleri',
-  },
-  {
-    url: BASE + 'APNQkAGgjgCE6oirbqGx0ReN9HZGbCtEloYtxR4Tf0g7ZaFurcS8c_Ko7B1PXRjoxC3-MZtcHtJtod2t9xBq_ursbAn9rjpdIYYsMk_3_1Ozm_vBmUnrrcHZVTivpXeOuIlQKce2wBOkJKynqnkT=w800-h600-k-no',
-    label: 'Lahmacun & Pide',
-  },
-  {
-    url: BASE + 'APNQkAH6DU3iXd30Xs-yq5-BWGF4jEuuPrXAYPEg7hsyhtPk2T54dKGqPFoQqxo0C_fOm2wWHhNgiQUSoiyiXzKQpFfxZGvyfK4WqGkAnE7ilaP035OchYLpIfv4MjpgReX_xTXlBOqY3Bet0zCo=w800-h655-k-no',
-    label: 'Dürüm Çeşitleri',
-  },
-  {
-    url: BASE + 'APNQkAE8Rt-8_D30PjLO8q_absbGxc_m1C9fD7Okqp7mxbi08-yAYA0WyiOqEAgyET9Ei-krhJ7zMYOZGvXId8bn3HltHnmIn3VO8wA-SNopF73JkxirR9TD1bbnWn8BPAUJDPV0thwtfcapxDDM=w800-h600-k-no',
-    label: 'Karışık Tabak',
-  },
+  { url: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80', label: 'Izgara Kebap' },
+  { url: 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=800&q=80', label: 'Lahmacun' },
+  { url: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80', label: 'Adana Kebap' },
+  { url: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=800&q=80', label: 'Dürüm' },
+  { url: 'https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=800&q=80', label: 'Pide' },
+  { url: 'https://images.unsplash.com/photo-1558030006-450675393462?w=800&q=80', label: 'Kebap Tabağı' },
+  { url: 'https://images.unsplash.com/photo-1551248429-40975aa4de74?w=800&q=80', label: 'Mangal' },
+  { url: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80', label: 'Lezzetler' },
+  { url: 'https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=800&q=80', label: 'Izgara' },
+  { url: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80', label: 'Urfa Kebap' },
+  { url: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80', label: 'Tabak Sunumu' },
+  { url: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80', label: 'Restoran' },
 ];
 
 import { useState } from 'react';
