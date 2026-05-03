@@ -1,0 +1,134 @@
+.gallery {
+  background: var(--dark2);
+  padding: 7rem 5%;
+}
+
+.gallery__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery__grid {
+  columns: 3 200px;
+  column-gap: 12px;
+  margin-bottom: 3rem;
+}
+
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  cursor: pointer;
+  break-inside: avoid;
+  margin-bottom: 12px;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 220px;
+  transition: transform 0.4s ease;
+}
+
+.gallery__item--0,
+.gallery__item--4 { /* no span needed in column layout */ }
+
+/* Taller items for visual variety */
+.gallery__item--1,
+.gallery__item--7 { height: 300px; }
+.gallery__item--3,
+.gallery__item--9 { height: 260px; }
+
+.gallery__item:hover {
+  transform: scale(1.02);
+}
+
+.gallery__item::after {
+  content: '🔍';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.gallery__item:hover::after {
+  opacity: 1;
+}
+
+/* Lightbox */
+.gallery__lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.gallery__lightbox-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery__lightbox-close:hover {
+  background: rgba(192,57,43,0.7);
+}
+
+.gallery__lightbox-img {
+  width: min(90vw, 900px);
+  height: min(85vh, 700px);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  animation: zoomIn 0.25s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.gallery__instagram {
+  text-align: center;
+}
+
+.gallery__instagram p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .gallery__grid { columns: 2 150px; }
+}
+
+@media (max-width: 480px) {
+  .gallery { padding: 5rem 4%; }
+  .gallery__grid { columns: 2 120px; column-gap: 8px; }
+  .gallery__item { margin-bottom: 8px; }
+}

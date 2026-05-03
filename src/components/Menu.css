@@ -1,0 +1,117 @@
+.menu {
+  padding: 7rem 5%;
+  background: var(--dark);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 3rem;
+}
+
+.menu__tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.menu__tab:hover {
+  border-color: rgba(212,160,23,0.4);
+  color: var(--cream);
+}
+
+.menu__tab--active {
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(192,57,43,0.35);
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.menu__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1.1rem 1.4rem;
+  background: var(--dark2);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.menu__item:hover {
+  border-color: rgba(212,160,23,0.25);
+  transform: translateY(-2px);
+}
+
+.menu__badge {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--dark);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 50px;
+}
+
+.menu__item-dots {
+  flex: 1;
+  border-bottom: 1px dashed rgba(255,255,255,0.1);
+  margin: 0 0.8rem;
+  order: 2;
+}
+
+.menu__item-name {
+  font-size: 0.92rem;
+  color: var(--cream);
+  font-weight: 500;
+  order: 1;
+  flex-shrink: 0;
+}
+
+.menu__item-price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gold);
+  order: 3;
+  flex-shrink: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.menu__note {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .menu { padding: 5rem 4%; }
+  .menu__tab { padding: 8px 14px; font-size: 0.82rem; }
+  .menu__grid { grid-template-columns: 1fr; }
+}
