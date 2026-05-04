@@ -1,1 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="bg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c0392b"/><stop offset="100%" stop-color="#7b1a10"/></radialGradient><radialGradient id="flame" cx="50%" cy="90%" r="70%"><stop offset="0%" stop-color="#f9ca24"/><stop offset="50%" stop-color="#e55039"/><stop offset="100%" stop-color="#c0392b" stop-opacity="0"/></radialGradient></defs><circle cx="50" cy="50" r="48" fill="url(#bg)"/><path d="M50 78 C37 67 28 55 34 41 C36 34 41 28 44 23 C45 31 43 35 46 38 C47 31 50 25 55 20 C58 29 54 35 57 40 C60 34 62 29 67 26 C69 37 63 46 65 53 C67 49 70 44 72 41 C73 52 66 63 61 70 C58 73 54 76 50 78Z" fill="url(#flame)"/><rect x="47" y="18" width="6" height="58" rx="3" fill="#f5f0e8" opacity="0.9"/><ellipse cx="50" cy="32" rx="11" ry="7.5" fill="#e8c49a" stroke="#b8763a" stroke-width="1.5"/><ellipse cx="50" cy="50" rx="12" ry="8" fill="#c47840" stroke="#8b4513" stroke-width="1.5"/><ellipse cx="50" cy="68" rx="11" ry="7.5" fill="#e8c49a" stroke="#b8763a" stroke-width="1.5"/><circle cx="50" cy="50" r="48" fill="none" stroke="#e8a030" stroke-width="2" opacity="0.35"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="plate" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#F2D49B"/>
+      <stop offset="70%" stop-color="#D4A840"/>
+      <stop offset="100%" stop-color="#A0722A"/>
+    </radialGradient>
+    <radialGradient id="topping" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#C0341A"/>
+      <stop offset="100%" stop-color="#7B1A0A"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Dış kabuk (ekmek kenarı) -->
+  <circle cx="50" cy="50" r="49" fill="#8B5A1A"/>
+  <!-- İç ekmek rengi -->
+  <circle cx="50" cy="50" r="44" fill="url(#plate)"/>
+  <!-- Kıyma/harç tabakası -->
+  <circle cx="50" cy="50" r="37" fill="url(#topping)"/>
+
+  <!-- Kıyma dokusu noktaları (et parçacıkları) -->
+  <circle cx="42" cy="42" r="2.5" fill="#E05030" opacity="0.7"/>
+  <circle cx="55" cy="40" r="2" fill="#C02818" opacity="0.6"/>
+  <circle cx="48" cy="55" r="2.8" fill="#E06040" opacity="0.65"/>
+  <circle cx="60" cy="52" r="2" fill="#C03020" opacity="0.6"/>
+  <circle cx="40" cy="58" r="2.2" fill="#D04030" opacity="0.7"/>
+  <circle cx="53" cy="62" r="1.8" fill="#B82010" opacity="0.55"/>
+  <circle cx="62" cy="43" r="2.3" fill="#D84030" opacity="0.65"/>
+  <circle cx="38" cy="48" r="2" fill="#C83020" opacity="0.6"/>
+  <circle cx="57" cy="57" r="2.5" fill="#E05030" opacity="0.6"/>
+  <circle cx="45" cy="65" r="1.8" fill="#C02818" opacity="0.55"/>
+
+  <!-- Maydanoz/yeşil dokunuşu -->
+  <ellipse cx="44" cy="46" rx="2.5" ry="1.2" fill="#4A8A2A" opacity="0.75" transform="rotate(-20,44,46)"/>
+  <ellipse cx="58" cy="56" rx="2.2" ry="1.1" fill="#5A9A35" opacity="0.7" transform="rotate(30,58,56)"/>
+  <ellipse cx="50" cy="43" rx="2" ry="1" fill="#4A8A2A" opacity="0.65" transform="rotate(10,50,43)"/>
+
+  <!-- Altın kenar çizgisi -->
+  <circle cx="50" cy="50" r="44" fill="none" stroke="#C8962A" stroke-width="1.5"/>
+  <circle cx="50" cy="50" r="49" fill="none" stroke="#7B4A10" stroke-width="1"/>
+</svg>
