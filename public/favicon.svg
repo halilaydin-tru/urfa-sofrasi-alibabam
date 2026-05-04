@@ -1,41 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <radialGradient id="plate" cx="45%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#F2D49B"/>
-      <stop offset="70%" stop-color="#D4A840"/>
-      <stop offset="100%" stop-color="#A0722A"/>
-    </radialGradient>
-    <radialGradient id="topping" cx="50%" cy="50%" r="55%">
-      <stop offset="0%" stop-color="#C0341A"/>
-      <stop offset="100%" stop-color="#7B1A0A"/>
-    </radialGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C0A00"/>
+      <stop offset="100%" stop-color="#3D1200"/>
+    </linearGradient>
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5D97A"/>
+      <stop offset="100%" stop-color="#C4881E"/>
+    </linearGradient>
+    <linearGradient id="flameGrad" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#E8400A"/>
+      <stop offset="100%" stop-color="#FFD040"/>
+    </linearGradient>
   </defs>
 
-  <!-- Dış kabuk (ekmek kenarı) -->
-  <circle cx="50" cy="50" r="49" fill="#8B5A1A"/>
-  <!-- İç ekmek rengi -->
-  <circle cx="50" cy="50" r="44" fill="url(#plate)"/>
-  <!-- Kıyma/harç tabakası -->
-  <circle cx="50" cy="50" r="37" fill="url(#topping)"/>
+  <!-- Arka plan -->
+  <circle cx="50" cy="50" r="50" fill="url(#bg)"/>
 
-  <!-- Kıyma dokusu noktaları (et parçacıkları) -->
-  <circle cx="42" cy="42" r="2.5" fill="#E05030" opacity="0.7"/>
-  <circle cx="55" cy="40" r="2" fill="#C02818" opacity="0.6"/>
-  <circle cx="48" cy="55" r="2.8" fill="#E06040" opacity="0.65"/>
-  <circle cx="60" cy="52" r="2" fill="#C03020" opacity="0.6"/>
-  <circle cx="40" cy="58" r="2.2" fill="#D04030" opacity="0.7"/>
-  <circle cx="53" cy="62" r="1.8" fill="#B82010" opacity="0.55"/>
-  <circle cx="62" cy="43" r="2.3" fill="#D84030" opacity="0.65"/>
-  <circle cx="38" cy="48" r="2" fill="#C83020" opacity="0.6"/>
-  <circle cx="57" cy="57" r="2.5" fill="#E05030" opacity="0.6"/>
-  <circle cx="45" cy="65" r="1.8" fill="#C02818" opacity="0.55"/>
+  <!-- Dış altın halka -->
+  <circle cx="50" cy="50" r="47" fill="none" stroke="#C4881E" stroke-width="1.8"/>
+  <circle cx="50" cy="50" r="44" fill="none" stroke="#C4881E" stroke-width="0.5" opacity="0.4"/>
 
-  <!-- Maydanoz/yeşil dokunuşu -->
-  <ellipse cx="44" cy="46" rx="2.5" ry="1.2" fill="#4A8A2A" opacity="0.75" transform="rotate(-20,44,46)"/>
-  <ellipse cx="58" cy="56" rx="2.2" ry="1.1" fill="#5A9A35" opacity="0.7" transform="rotate(30,58,56)"/>
-  <ellipse cx="50" cy="43" rx="2" ry="1" fill="#4A8A2A" opacity="0.65" transform="rotate(10,50,43)"/>
+  <!-- Stilize alev - U'nun üstünde -->
+  <path d="M50 18 C50 18 47 22 47 25 C46 22 45 20 44 19 C44 23 46 26 46 29 C45 27 44 25 43 25 C43 29 46 32 47 35 C47 33 47 31 48 30 C48 33 49 35 50 36 C51 35 52 33 52 30 C53 31 53 33 53 35 C54 32 57 29 57 25 C56 25 55 27 54 29 C54 26 56 23 56 19 C55 20 54 22 53 25 C53 22 53 18 50 18Z" fill="url(#flameGrad)"/>
 
-  <!-- Altın kenar çizgisi -->
-  <circle cx="50" cy="50" r="44" fill="none" stroke="#C8962A" stroke-width="1.5"/>
-  <circle cx="50" cy="50" r="49" fill="none" stroke="#7B4A10" stroke-width="1"/>
+  <!-- U harfi -->
+  <text
+    x="50"
+    y="80"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="48"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="url(#goldText)"
+  >U</text>
+
 </svg>
