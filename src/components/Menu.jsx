@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaBreadSlice, FaGlassWhiskey, FaBirthdayCake } from 'react-icons/fa';
-import { GiBurrito, GiShishKebab, GiCookingPot } from 'react-icons/gi';
+import { GiDonerKebab, GiKebabSpit, GiCookingPot } from 'react-icons/gi';
 import './Menu.css';
 
 const categories = [
@@ -21,7 +21,7 @@ const categories = [
   },
   {
     id: 'durum',
-    icon: GiBurrito,
+    icon: GiDonerKebab,
     name: 'Dürüm Çeşitleri',
     items: [
       { name: 'Adana Dürüm', price: '260₺' },
@@ -36,7 +36,7 @@ const categories = [
   },
   {
     id: 'kebap',
-    icon: GiShishKebab,
+    icon: GiKebabSpit,
     name: 'Kebap Çeşitleri',
     items: [
       { name: 'Adana', price: '450₺', popular: true },
