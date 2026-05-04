@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { GiMeat } from 'react-icons/gi';
 import './Navbar.css';
 
 const links = [
@@ -28,7 +29,7 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <a href="#anasayfa" className="navbar__logo" onClick={(e) => handleLink(e, '#anasayfa')}>
-        <span className="navbar__logo-icon">🍖</span>
+        <GiMeat className="navbar__logo-icon" />
         <span>
           <span className="navbar__logo-main">Urfa Sofrası</span>
           <span className="navbar__logo-sub">Ali Babam Lahmacun</span>

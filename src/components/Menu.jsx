@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { FaBreadSlice, FaGlassWhiskey, FaBirthdayCake } from 'react-icons/fa';
+import { GiBurrito, GiShishKebab, GiCookingPot } from 'react-icons/gi';
 import './Menu.css';
 
 const categories = [
   {
     id: 'lahmacun',
-    icon: '🫓',
+    icon: FaBreadSlice,
     name: 'Lahmacun & Pide',
     items: [
       { name: 'Lahmacun (Paket)', price: '130₺' },
@@ -19,7 +21,7 @@ const categories = [
   },
   {
     id: 'durum',
-    icon: '🌯',
+    icon: GiBurrito,
     name: 'Dürüm Çeşitleri',
     items: [
       { name: 'Adana Dürüm', price: '260₺' },
@@ -34,7 +36,7 @@ const categories = [
   },
   {
     id: 'kebap',
-    icon: '🍢',
+    icon: GiShishKebab,
     name: 'Kebap Çeşitleri',
     items: [
       { name: 'Adana', price: '450₺', popular: true },
@@ -52,7 +54,7 @@ const categories = [
   },
   {
     id: 'corba',
-    icon: '🍲',
+    icon: GiCookingPot,
     name: 'Çorbalar',
     items: [
       { name: 'Mercimek', price: '100₺' },
@@ -61,7 +63,7 @@ const categories = [
   },
   {
     id: 'tatli',
-    icon: '🍮',
+    icon: FaBirthdayCake,
     name: 'Tatlılar',
     items: [
       { name: 'Künefe', price: '200₺', popular: true },
@@ -71,7 +73,7 @@ const categories = [
   },
   {
     id: 'icecek',
-    icon: '🥤',
+    icon: FaGlassWhiskey,
     name: 'İçecekler',
     items: [
       { name: 'Ayran', price: '50₺' },
@@ -96,16 +98,19 @@ export default function Menu() {
       <div className="section-divider" />
 
       <div className="menu__tabs">
-        {categories.map((cat) => (
+        {categories.map((cat) => {
+          const Icon = cat.icon;
+          return (
           <button
             key={cat.id}
             className={`menu__tab ${active === cat.id ? 'menu__tab--active' : ''}`}
             onClick={() => setActive(cat.id)}
           >
-            <span>{cat.icon}</span>
+            <Icon />
             <span>{cat.name}</span>
           </button>
-        ))}
+          );
+        })}
       </div>
 
       <div className="menu__grid">

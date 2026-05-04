@@ -1,3 +1,4 @@
+import { FaPhone, FaInstagram, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import './Contact.css';
 
 export default function Contact() {
@@ -11,7 +12,7 @@ export default function Contact() {
         <div className="contact__grid">
           <div className="contact__cards">
             <a href="tel:05537872632" className="contact__card contact__card--red">
-              <span className="contact__card-icon">📞</span>
+              <span className="contact__card-icon"><FaPhone /></span>
               <div>
                 <p className="contact__card-label">Telefon</p>
                 <p className="contact__card-value">0553 787 26 32</p>
@@ -25,7 +26,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="contact__card"
             >
-              <span className="contact__card-icon">📸</span>
+              <span className="contact__card-icon"><FaInstagram /></span>
               <div>
                 <p className="contact__card-label">Instagram</p>
                 <p className="contact__card-value">@urfasofrasi_alibabamlahmacun</p>
@@ -39,7 +40,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="contact__card"
             >
-              <span className="contact__card-icon">📍</span>
+              <span className="contact__card-icon"><FaMapMarkerAlt /></span>
               <div>
                 <p className="contact__card-label">Adres</p>
                 <p className="contact__card-value">Urfa Sofrası</p>
@@ -48,7 +49,7 @@ export default function Contact() {
             </a>
 
             <div className="contact__card contact__card--hours">
-              <span className="contact__card-icon">🕐</span>
+              <span className="contact__card-icon"><FaClock /></span>
               <div>
                 <p className="contact__card-label">Çalışma Saatleri</p>
                 <p className="contact__card-value">Her Gün Açık</p>

@@ -1,10 +1,11 @@
+import { FaFire, FaLeaf, FaHistory, FaRocket, FaPhone } from 'react-icons/fa';
 import './About.css';
 
 const features = [
-  { icon: '🔥', title: 'Odun Ateşinde Pişirilir', desc: 'Geleneksel yöntemlerle, odun ateşinin dumanlı lezzetiyle.' },
-  { icon: '🌿', title: 'Taze Malzemeler', desc: 'Her gün taze alınan malzemelerle hazırlanan otantik lezzetler.' },
-  { icon: '🏺', title: 'Urfa Geleneği', desc: 'Şanlıurfa\'nın köklü mutfak kültüründen ilham alınan tarifler.' },
-  { icon: '🚀', title: 'Hızlı Servis', desc: 'Paket servis ve salon hizmetinde hız ve kaliteden ödün vermiyoruz.' },
+  { icon: FaFire, title: 'Odun Ateşinde Pişirilir', desc: 'Geleneksel yöntemlerle, odun ateşinin dumanlı lezzetiyle.' },
+  { icon: FaLeaf, title: 'Taze Malzemeler', desc: 'Her gün taze alınan malzemelerle hazırlanan otantik lezzetler.' },
+  { icon: FaHistory, title: 'Urfa Geleneği', desc: 'Şanlıurfa\'nın köklü mutfak kültüründen ilham alınan tarifler.' },
+  { icon: FaRocket, title: 'Hızlı Servis', desc: 'Paket servis ve salon hizmetinde hız ve kaliteden ödün vermiyoruz.' },
 ];
 
 export default function About() {
@@ -29,20 +30,23 @@ export default function About() {
             zengin lezzet dünyasına davet ediyor.
           </p>
           <a href="tel:05537872632" className="btn-primary about__cta">
-            📞 Hemen Ara: 0553 787 26 32
+            <FaPhone style={{ marginRight: '0.4rem' }} /> Hemen Ara: 0553 787 26 32
           </a>
         </div>
 
         <div className="about__features">
-          {features.map((f) => (
+          {features.map((f) => {
+            const Icon = f.icon;
+            return (
             <div className="about__feature-card" key={f.title}>
-              <span className="about__feature-icon">{f.icon}</span>
+              <span className="about__feature-icon"><Icon /></span>
               <div>
                 <h4 className="about__feature-title">{f.title}</h4>
                 <p className="about__feature-desc">{f.desc}</p>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

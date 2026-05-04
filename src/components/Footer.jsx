@@ -1,3 +1,5 @@
+import { FaPhone, FaInstagram, FaMapMarkerAlt } from 'react-icons/fa';
+import { GiMeat } from 'react-icons/gi';
 import './Footer.css';
 
 export default function Footer() {
@@ -9,7 +11,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__inner">
         <div className="footer__brand">
-          <p className="footer__logo-icon">🍖</p>
+          <GiMeat className="footer__logo-icon" />
           <h3 className="footer__logo-name">Urfa Sofrası</h3>
           <p className="footer__logo-sub">Ali Babam Lahmacun</p>
           <p className="footer__tagline">
@@ -23,10 +25,10 @@ export default function Footer() {
               className="footer__social"
               aria-label="Instagram"
             >
-              📸
+              <FaInstagram />
             </a>
             <a href="tel:05537872632" className="footer__social" aria-label="Telefon">
-              📞
+              <FaPhone />
             </a>
             <a
               href="https://maps.app.goo.gl/zy31Uo9BfPwXaum28"
@@ -35,7 +37,7 @@ export default function Footer() {
               className="footer__social"
               aria-label="Konum"
             >
-              📍
+              <FaMapMarkerAlt />
             </a>
           </div>
         </div>
@@ -55,9 +57,9 @@ export default function Footer() {
 
         <div className="footer__contact">
           <h4 className="footer__nav-title">İletişim</h4>
-          <p>📞 <a href="tel:05537872632">0553 787 26 32</a></p>
-          <p>📸 <a href="https://www.instagram.com/urfasofrasi_alibabamlahmacun" target="_blank" rel="noopener noreferrer">Instagram</a></p>
-          <p>📍 <a href="https://maps.app.goo.gl/zy31Uo9BfPwXaum28" target="_blank" rel="noopener noreferrer">Konum Görüntüle</a></p>
+          <p><FaPhone style={{ marginRight: '0.4rem' }} /> <a href="tel:05537872632">0553 787 26 32</a></p>
+          <p><FaInstagram style={{ marginRight: '0.4rem' }} /> <a href="https://www.instagram.com/urfasofrasi_alibabamlahmacun" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+          <p><FaMapMarkerAlt style={{ marginRight: '0.4rem' }} /> <a href="https://maps.app.goo.gl/zy31Uo9BfPwXaum28" target="_blank" rel="noopener noreferrer">Konum Görüntüle</a></p>
         </div>
       </div>
 
